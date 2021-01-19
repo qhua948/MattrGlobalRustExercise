@@ -7,8 +7,7 @@ use rocket_contrib::json::Json;
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Serialize)]
-pub struct Credential {
-}
+pub struct Credential {}
 
 #[get("/credentials")]
 fn get_credentials() -> Json<Vec<Credential>> {
@@ -17,6 +16,6 @@ fn get_credentials() -> Json<Vec<Credential>> {
 
 fn main() {
     rocket::ignite()
-        .mount("/",
-            routes![get_credentials]).launch();
+        .mount("/", routes![get_credentials])
+        .launch();
 }
