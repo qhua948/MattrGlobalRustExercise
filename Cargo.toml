@@ -1,7 +1,7 @@
 [package]
 name = "rust-exercise"
 version = "0.1.0"
-authors = ["MattrGlobal"]
+authors = ["Edward"]
 edition = "2018"
 
 
@@ -9,3 +9,9 @@ edition = "2018"
 rocket = "0.4"
 rocket_contrib = { version = "0.4", features = ["json"] }
 serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde-value = "0.7.0"
+
+[dependencies.rusqlite]
+version = "0.24.2"
+features = ["chrono", "blob", "serde_json"]
